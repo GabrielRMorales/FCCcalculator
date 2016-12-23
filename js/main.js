@@ -1,24 +1,22 @@
 $(document).ready(function(){
 
-
 	$(".calcbutton").click(function(){
-		var text=document.getElementById("test").value;
+		var text=document.getElementById("field").value;
 		
 		if (text.length<=0){
-			$("#test").val($(this).text());
+			$("#field").val($(this).text());
 		}
 		else{
-			$("#test").val(text+=" "+$(this).text());
-			
+			$("#field").val(text+=$(this).text());			
 		}
 
 	});
 	$("#equal").click(function(){
-		var text=document.getElementById("test").value;
-		$("#test").val(math.eval(text));
+		var text=document.getElementById("field").value;
+		$("#field").val(math.eval(text));
 	});
 	$("#ce").click(function(){
-		$("#test").val("");
+		$("#field").val("");
 	});
 
 });
